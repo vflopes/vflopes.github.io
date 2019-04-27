@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Unleash Redis&#39;s full potential | Victor França Lopes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="I think most people don’t use Redis’s full potential. The same goes for Elasticsearch, but I’ll tell you about it in another post. In the present market I have observed many teams and companies using">
+<meta name="keywords" content="redis,streams,keydb,hfxbus">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Unleash Redis&#39;s full potential">
+<meta property="og:url" content="http://vflopes.github.io/2019/04/27/My-New-Post/index.html">
+<meta property="og:site_name" content="Victor França Lopes">
+<meta property="og:description" content="I think most people don’t use Redis’s full potential. The same goes for Elasticsearch, but I’ll tell you about it in another post. In the present market I have observed many teams and companies using">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-04-27T12:19:23.865Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Unleash Redis&#39;s full potential">
+<meta name="twitter:description" content="I think most people don’t use Redis’s full potential. The same goes for Elasticsearch, but I’ll tell you about it in another post. In the present market I have observed many teams and companies using">
+  
+    <link rel="alternate" href="/atom.xml" title="Victor França Lopes" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Victor França Lopes</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Code ronin</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://vflopes.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-My-New-Post" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/04/27/My-New-Post/" class="article-date">
+  <time datetime="2019-04-27T11:39:43.000Z" itemprop="datePublished">2019-04-27</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Redis/">Redis</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Unleash Redis&#39;s full potential
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>I think most people don’t use Redis’s full potential. The same goes for Elasticsearch, but I’ll tell you about it in another post. In the present market I have observed many teams and companies using wide scope tools to complete small parts of their solutions or problems. It is very simple to think of a tool that solves a specific problem without thinking of all the burden generated to maintain it and make it sustainable in the long run.</p>
+<h3 id="How-do-you-know-Redis"><a href="#How-do-you-know-Redis" class="headerlink" title="How do you know Redis?"></a>How do you know Redis?</h3><p>If you were to list the keywords about it what would be the first? By experience, most people would say: “cache”, “key-value”, “in memory database”.</p>
+<p>Not that all of this is incorrect, they are features of Redis. Now I’ll tell you how I would describe Redis: <strong>an application for storing and managing machine state cycles.</strong></p>
+<p>Stateless applications are not useful without inputs and outputs, this can be thought of with an external machine state that is handled by your application. Note: Being stateless to me is almost a commandment when we are talking about SOA.</p>
+<h3 id="Now-I’ll-show-you-a-little-more-than-Redis-can-do"><a href="#Now-I’ll-show-you-a-little-more-than-Redis-can-do" class="headerlink" title="Now I’ll show you a little more than Redis can do."></a>Now I’ll show you a little more than Redis can do.</h3><p>Have you read <a href="https://redislabs.com/community/ebook/" target="_blank" rel="noopener">Redis In Action eBook</a>? You should, this will open your horizons.</p>
+<p>A use case is for example scheduled jobs, which you can easily build with the <a href="https://redis.io/commands#sorted_set" target="_blank" rel="noopener">Redis Sorted Sets</a>. Tip: Think about the criterion to rank as the timestamp of your job scheduling.</p>
+<p>Now you’re probably ready to get to know <a href="https://github.com/JohnSully/KeyDB" target="_blank" rel="noopener">KeyDB</a> if you want to achieve stratospheric levels of performance.</p>
+<p>One question that I am asked most often is about persistence: “I am not ok with losing my states stored in Redis, so I think it is only useful for caching.” What do you think?</p>
+<p><strong>Strongly disagree</strong>, have you read about <a href="https://redis.io/topics/persistence" target="_blank" rel="noopener">AOFs and RDBs</a>? I imagine you need performance and reliability, how to solve this if the AOF guarantees me persistence, but it destroys the performance and the RDB is just the opposite? Simple: Create two Redis (or KeyDB) implementation tiers, one for high performance (RDB) and one for high reliability (AOF), so your application can connect with either (or both) when you need one features.</p>
+<h3 id="Do-you-use-Kafka-or-RabbitMQ"><a href="#Do-you-use-Kafka-or-RabbitMQ" class="headerlink" title="Do you use Kafka or RabbitMQ?"></a>Do you use Kafka or RabbitMQ?</h3><p>Remember that what I am going to say now is a thought bias of mine: you probably don’t need them or you would get a better result with <a href="https://redis.io/topics/streams-intro" target="_blank" rel="noopener">Redis Streams</a> (implemented in Redis 5.0). Think about the possibilities for microservices, SOA, event-sourcing, CQRS, SCS.</p>
+<p>In this last point (which I personally think was a sensational feature implemented in Redis), to exploit that potential I created <a href="https://www.npmjs.com/package/hfxbus" target="_blank" rel="noopener">HFXBus</a> that will help you create a battle-ready SOA environment.</p>
+<h3 id="Yes-I-am-a-big-fan-of-Redis-KeyDB"><a href="#Yes-I-am-a-big-fan-of-Redis-KeyDB" class="headerlink" title="Yes, I am a big fan of Redis/KeyDB."></a>Yes, I am a big fan of Redis/KeyDB.</h3><p>I have no problem with alternatives or implementations, all that I am talking about depends a lot on the architecture of your environment. I know there are weaknesses in it, as the implementation of Redis Cluster could have a better architecture (I’ll also comment on this in another post).</p>
+<p>I hope I’ve helped you think outside the box with Redis, going way beyond the cache.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://vflopes.github.io/2019/04/27/My-New-Post/" data-id="cjuzfnjf40001at6p0hjiu32e" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hfxbus/">hfxbus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/keydb/">keydb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/redis/">redis</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/streams/">streams</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Redis/">Redis</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/hfxbus/">hfxbus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/keydb/">keydb</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/redis/">redis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/streams/">streams</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/hfxbus/" style="font-size: 10px;">hfxbus</a> <a href="/tags/keydb/" style="font-size: 10px;">keydb</a> <a href="/tags/redis/" style="font-size: 10px;">redis</a> <a href="/tags/streams/" style="font-size: 10px;">streams</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/04/27/My-New-Post/">Unleash Redis&#39;s full potential</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Victor França Lopes<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
