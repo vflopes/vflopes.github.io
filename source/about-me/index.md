@@ -92,7 +92,7 @@ Because our life span is limited, we have to dedicate our time to what we want a
 
 ### Are you evaluating new opportunities?
 
-I am always evaluating new opportunities, for business, projects, job vacancies. Just remember what I said about my profile: challenge and rewards. Not "I trade six for a half dozen," an opportunity always has to be better than my current situation.
+I am always evaluating new opportunities, for business, projects, job. Just remember what I said about my profile: challenge and rewards. Not "I trade six for a half dozen," an opportunity always has to be better than my current situation.
 
 Of course, for open-source projects we have our personal motivations and not necessarily you need to show me that it's worth, I discover the value of the solution understanding the project proposal.
 
