@@ -390,9 +390,9 @@ body {
 .main-nav-link {
   float: left;
   color: #fff;
-  opacity: 0.6;
+  opacity: 0.8;
   text-decoration: none;
-  text-shadow: 0 1px rgba(0,0,0,0.2);
+  text-shadow: 0 1px rgba(0,0,0,0.6);
   -webkit-transition: opacity 0.2s;
   -moz-transition: opacity 0.2s;
   -ms-transition: opacity 0.2s;
@@ -407,9 +407,9 @@ body {
 .nav-icon {
   font-family: FontAwesome;
   text-align: center;
-  font-size: 14px;
-  width: 14px;
-  height: 14px;
+  font-size: 22px;
+  width: 22px;
+  height: 22px;
   padding: 20px 15px;
   position: relative;
   cursor: pointer;
@@ -443,6 +443,12 @@ body {
 }
 #nav-search-btn:before {
   content: "\f002";
+}
+#nav-linkedin:before {
+  content: "\f08c";
+}
+#nav-github:before {
+  content: "\f09b";
 }
 #search-form-wrap {
   position: absolute;
