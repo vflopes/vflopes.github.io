@@ -3,7 +3,7 @@ title: About Me
 date: 2019-04-27 09:52:26
 ---
 
-I was born in September 1994 in a small town in the interior of Rio de Janeiro (Brazil). As a child I always had an instinct to explore the unknown. My mother says the toys I liked best were workshop tools (and this was stimulated by my father being an electrical engineer). I liked to leaf through encyclopedias even though I could not read, seeing the figures and creating my experiments.
+I was born in September 1994 in Brazil's country side. As a child I always had an instinct to explore the unknown. My mother says the toys I liked best were workshop tools (and this was stimulated by my father being an electrical engineer). I liked to leaf through encyclopedias even though I could not read, seeing the figures and creating my experiments.
 
 I think my journey with technology started when my parents gave me my first game console: Mega Drive. I started thinking about how I could do my games. Then I began to study programming and discovered in what galaxy the universe of knowledge I was: IT.
 
@@ -11,9 +11,9 @@ Many years passed, I moved to Sao Paulo alone to begin my journey in search of m
 
 <hr/>
 
-### Why "code ronin"?
+### Why is it called "code ronin"?
 
-Well, I don't have formal superior education, but I in my skill bars "self-taught" is overpowered. I am a tech guy with ninja skills.
+Well, I don’t have a B.A degree, but in my skill bars "self-taught" is overpowered. I am a tech guy with ninja skills.
 
 <hr/>
 
