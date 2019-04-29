@@ -7,17 +7,17 @@
   
   <title>Victor França Lopes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Why &quot;code ronin&quot;? Well, I don&apos;t have formal superior education, but I in my skill bars &quot;self-taught&quot; is overpowered. I am a tech guy with ninja skills.">
+  <meta name="description" content="Why is it called &quot;code ronin&quot;? Well, I don’t have a B.A degree, but in my skill bars &quot;self-taught&quot; is overpowered. I am a tech guy with ninja skills.">
 <meta name="keywords" content="developer, devops, engineer, architect, ninja, sre, coder">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Victor França Lopes">
 <meta property="og:url" content="http://vflopes.github.io/index.html">
 <meta property="og:site_name" content="Victor França Lopes">
-<meta property="og:description" content="Why &quot;code ronin&quot;? Well, I don&apos;t have formal superior education, but I in my skill bars &quot;self-taught&quot; is overpowered. I am a tech guy with ninja skills.">
+<meta property="og:description" content="Why is it called &quot;code ronin&quot;? Well, I don’t have a B.A degree, but in my skill bars &quot;self-taught&quot; is overpowered. I am a tech guy with ninja skills.">
 <meta property="og:locale" content="en">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Victor França Lopes">
-<meta name="twitter:description" content="Why &quot;code ronin&quot;? Well, I don&apos;t have formal superior education, but I in my skill bars &quot;self-taught&quot; is overpowered. I am a tech guy with ninja skills.">
+<meta name="twitter:description" content="Why is it called &quot;code ronin&quot;? Well, I don’t have a B.A degree, but in my skill bars &quot;self-taught&quot; is overpowered. I am a tech guy with ninja skills.">
   
   
     <link rel="icon" href="/favicon-32x32.png">
@@ -97,15 +97,15 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>I’ve always had the philosophy that everything that is needed to run a project should be in your repository. A developer must be able to deliver their release with all reliability steps (CI/CD) performing all operations if they form self-contained.</p>
-<p>This philosophy is very similar to the feature that some projects have called: zero configuration. Of course, projects have dependencies and as a Javascript developer I know that well. But note, when you have a package.json you do not have to configure each dependency manually, just run <code>npm install</code> and you have everything you need in your repository.</p>
-<p>What about the CI/CD? Well, today we can create the pipelines through files in your project, this works for Jenkins, GitLab, Travis and others. But still you get depending on the external tool and configured properly to run the pipelines. This creates one of the biggest drawbacks of today’s projects: lock-in.</p>
-<p>If I configure <strong>.gitlab-ci.yaml</strong> how do I run the same if I need my project to go through Jenkins? And worse, if I want to test my pipeline locally do I need to have GitLab send run on my machine? I’m not saying that these tools are not good for this reason, it’s a matter of choice about having a self-contained project or not.</p>
+<p>This philosophy is very similar to the feature that some projects have called zero configuration. Projects have dependencies. Notice when you have a package.json you don’t have to configure each dependency manually, just run <code>npm install</code> and you will have everything you need in your repository.</p>
+<p>What about the CI/CD? Well, today we can create the pipelines through files in your project, this works for Jenkins, GitLab, Travis and others. But you will still get to rely on the external tool and configured properly to run the pipelines. This creates one of the biggest drawbacks of today’s projects: lock-in.</p>
+<p>If I configure <strong>.gitlab-ci.yaml</strong> how do I run the same pipeline if I need my project to go through Jenkins? And worse, if I want to test my pipeline locally do I need to have GitLab send run on my machine? I’m not saying that these tools are not good for this reason, it’s a matter of choice about having a self-contained project or not.</p>
 <h3 id="How-I-solved-this-problem"><a href="#How-I-solved-this-problem" class="headerlink" title="How I solved this problem"></a>How I solved this problem</h3><p>Anyone who has had experience with continuous integration, deployment, delivery knows what it takes to run a pipeline to ensure your testing, builds, releases, deployments, and so on. In all these steps we deal with various configurations, variables, constants, sensitive data (think about SSH keys, certificates, passwords, API keys).</p>
-<p>So I listed some common attributes that a technology to create a self-contained CI/CD tool in the project:</p>
+<p>So I listed some common attributes to create a self-contained CI/CD tool in the project:</p>
 <ul>
-<li><strong>Security:</strong> Sensitive data can be generated or even dependencies of the pipelines, for that I used the format KDBX.</li>
+<li><strong>Security:</strong> Sensitive data or dependencies can be generated from or used by pipelines, for that I used the format KDBX.</li>
 <li><strong>Versioned database:</strong> Each pipeline execution can generate data that must be stored and versioned in the repository itself (think about changelogs), once again the KDBX can be stored in the repository itself.</li>
-<li><strong>Ease of management:</strong> No one wants something complicated or difficult or with a list of huge commands to decorate to simply create their pipelines, so I created the “ops pack” a way to create the KDBX through a project that states how the same should be composed.</li>
+<li><strong>Ease of management:</strong> No one wants something complicated or difficult or with a list of huge commands to decorate to simply create their pipelines, so I created the “ops pack” a way to create the KDBX through a project that informs how the database file should be composed.</li>
 <li><strong>Scripting:</strong> Of course, this is the heart of the pipelines, you need to be able to create the scripts to perform the confidence steps, so I added support for shell scripting and Javascript (NodeJS 10).</li>
 <li><strong>Friendly:</strong> To have a painless adoption by developers, devops and SREs should be something very friendly, for this I created this software as a git subcommand.</li>
 </ul>
@@ -114,7 +114,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://vflopes.github.io/2019/04/28/Git-Ops-git-with-operations-powers/" data-id="cjv11qt6h0000p36psez5lw1g" class="article-share-link">Share</a>
+      <a data-url="http://vflopes.github.io/2019/04/28/Git-Ops-git-with-operations-powers/" data-id="cjv2yt7ps0000nt6paodmedxw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/cd/">cd</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ci/">ci</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ops/">ops</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sre/">sre</a></li></ul>
@@ -154,22 +154,22 @@
       
         <p>I think most people don’t use Redis’s full potential. The same goes for Elasticsearch, but I’ll tell you about it in another post. In the present market I have observed many teams and companies using wide scope tools to complete small parts of their solutions or problems. It is very simple to think of a tool that solves a specific problem without thinking of all the burden generated to maintain it and make it sustainable in the long run.</p>
 <h3 id="How-do-you-know-Redis"><a href="#How-do-you-know-Redis" class="headerlink" title="How do you know Redis?"></a>How do you know Redis?</h3><p>If you were to list the keywords about it what would be the first? By experience, most people would say: “cache”, “key-value”, “in memory database”.</p>
-<p>Not that all of this is incorrect, they are features of Redis. Now I’ll tell you how I would describe Redis: <strong>an application for storing and managing machine state cycles.</strong></p>
-<p>Stateless applications are not useful without inputs and outputs, this can be thought of with an external machine state that is handled by your application. Note: Being stateless to me is almost a commandment when we are talking about SOA.</p>
-<h3 id="Now-I’ll-show-you-a-little-more-than-Redis-can-do"><a href="#Now-I’ll-show-you-a-little-more-than-Redis-can-do" class="headerlink" title="Now I’ll show you a little more than Redis can do."></a>Now I’ll show you a little more than Redis can do.</h3><p>Have you read <a href="https://redislabs.com/community/ebook/" target="_blank" rel="noopener">Redis In Action eBook</a>? You should, this will open your horizons.</p>
-<p>A use case is for example scheduled jobs, which you can easily build with the <a href="https://redis.io/commands#sorted_set" target="_blank" rel="noopener">Redis Sorted Sets</a>. Tip: Think about the criterion to rank as the timestamp of your job scheduling.</p>
+<p>It isn’t all wrong, they are features of Redis. Now I’ll tell you how I would describe Redis: <strong>an application for storing and managing machine state cycles.</strong></p>
+<p>Stateless applications are not useful without inputs and outputs, this can be thought as an external machine state that is handled by your application. Note: Being stateless to me is almost a commandment when we are talking about SOA.</p>
+<h3 id="Now-I’ll-show-you-a-little-more-of-Redis-can-do"><a href="#Now-I’ll-show-you-a-little-more-of-Redis-can-do" class="headerlink" title="Now I’ll show you a little more of Redis can do."></a>Now I’ll show you a little more of Redis can do.</h3><p>Have you read <a href="https://redislabs.com/community/ebook/" target="_blank" rel="noopener">Redis In Action eBook</a>? You should, this will open your horizons.</p>
+<p>Scheduled jobs, per example, which you can easily build with the <a href="https://redis.io/commands#sorted_set" target="_blank" rel="noopener">Redis Sorted Sets</a>. Tip: Think about the criteria to rank the timestamp of your job scheduling.</p>
 <p>Now you’re probably ready to get to know <a href="https://github.com/JohnSully/KeyDB" target="_blank" rel="noopener">KeyDB</a> if you want to achieve stratospheric levels of performance.</p>
-<p>One question that I am asked most often is about persistence: “I am not ok with losing my states stored in Redis, so I think it is only useful for caching.” What do you think?</p>
-<p><strong>Strongly disagree</strong>, have you read about <a href="https://redis.io/topics/persistence" target="_blank" rel="noopener">AOFs and RDBs</a>? I imagine you need performance and reliability, how to solve this if the AOF guarantees me persistence, but it destroys the performance and the RDB is just the opposite? Simple: Create two Redis (or KeyDB) implementation tiers, one for high performance (RDB) and one for high reliability (AOF), so your application can connect with either (or both) when you need one features.</p>
-<h3 id="Do-you-use-Kafka-or-RabbitMQ"><a href="#Do-you-use-Kafka-or-RabbitMQ" class="headerlink" title="Do you use Kafka or RabbitMQ?"></a>Do you use Kafka or RabbitMQ?</h3><p>Remember that what I am going to say now is a thought bias of mine: you probably don’t need them or you would get a better result with <a href="https://redis.io/topics/streams-intro" target="_blank" rel="noopener">Redis Streams</a> (implemented in Redis 5.0). Think about the possibilities for microservices, SOA, event-sourcing, CQRS, SCS.</p>
-<p>In this last point (which I personally think was a sensational feature implemented in Redis), to exploit that potential I created <a href="https://www.npmjs.com/package/hfxbus" target="_blank" rel="noopener">HFXBus</a> that will help you create a battle-ready SOA environment.</p>
+<p>One question that I am asked most oftenly is about persistence: “I am not ok with losing my states stored in Redis, so I think it is only useful for caching.” What do you think?</p>
+<p><strong>Strongly disagree</strong>, have you read about <a href="https://redis.io/topics/persistence" target="_blank" rel="noopener">AOFs and RDBs</a>? I imagine you need performance and reliability, how to solve this if the AOF guarantees me persistence, but it destroys the performance and the RDB is just the opposite? Simple: Create two Redis (or KeyDB) implementation tiers, one for high performance (RDB) and one for high reliability (AOF), so your application can connect with when you need one feature.</p>
+<h3 id="Do-you-use-Kafka-or-RabbitMQ"><a href="#Do-you-use-Kafka-or-RabbitMQ" class="headerlink" title="Do you use Kafka or RabbitMQ?"></a>Do you use Kafka or RabbitMQ?</h3><p>Remember that what I am going to say now is my thought bias: you probably don’t need them or you would get a better result with <a href="https://redis.io/topics/streams-intro" target="_blank" rel="noopener">Redis Streams</a> (implemented in Redis 5.0). Think about the possibilities for microservices, SOA, event-sourcing, CQRS, SCS.</p>
+<p>In this last point, to exploit that potential I created <a href="https://www.npmjs.com/package/hfxbus" target="_blank" rel="noopener">HFXBus</a> that will help you create a battle-ready SOA environment.</p>
 <h3 id="Yes-I-am-a-big-fan-of-Redis-KeyDB"><a href="#Yes-I-am-a-big-fan-of-Redis-KeyDB" class="headerlink" title="Yes, I am a big fan of Redis/KeyDB."></a>Yes, I am a big fan of Redis/KeyDB.</h3><p>I have no problem with alternatives or implementations, all that I am talking about depends a lot on the architecture of your environment. I know there are weaknesses in it, as the implementation of Redis Cluster could have a better architecture (I’ll also comment on this in another post).</p>
 <p>I hope I’ve helped you think outside the box with Redis, going way beyond the cache.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://vflopes.github.io/2019/04/27/Unleash-Redis-s-full-potential/" data-id="cjv11qt6s0002p36peei0n4q5" class="article-share-link">Share</a>
+      <a data-url="http://vflopes.github.io/2019/04/27/Unleash-Redis-s-full-potential/" data-id="cjv2yt7q40002nt6p8g5nvi15" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hfxbus/">hfxbus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/keydb/">keydb</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/redis/">redis</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/streams/">streams</a></li></ul>
