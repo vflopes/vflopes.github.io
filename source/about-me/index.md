@@ -85,7 +85,6 @@ Because our life span is limited, we have to dedicate our time to what we want a
 
 * Java
 * Ruby
-* Python
 * IBM, Microsoft and Oracle entreprise things
 
 <hr/>
