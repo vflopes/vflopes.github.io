@@ -1,0 +1,39 @@
+<nav class="post-nav">
+  {%- assign current_lang = page.lang | default: site.default_lang | default: site.lang | default: "en" -%}
+  {%- assign previous_label = "Previous" -%}
+  {%- assign next_label = "Next" -%}
+  {%- if current_lang == "pt" -%}
+  {%- assign previous_label = "Anterior" -%}
+  {%- assign next_label = "Proximo" -%}
+  {%- endif -%}
+
+  {%- assign posts_in_lang = site.posts | where: "lang", current_lang -%}
+  {%- assign current_index = nil -%}
+  {%- for post in posts_in_lang -%}
+  {%- if post.url == page.url -%}
+  {%- assign current_index = forloop.index0 -%}
+  {%- break -%}
+  {%- endif -%}
+  {%- endfor -%}
+
+  {%- assign previous_post = nil -%}
+  {%- assign next_post = nil -%}
+  {%- if current_index != nil -%}
+  {%- assign previous_index = current_index | minus: 1 -%}
+  {%- assign next_index = current_index | plus: 1 -%}
+  {%- assign previous_post = posts_in_lang[previous_index] -%}
+  {%- assign next_post = posts_in_lang[next_index] -%}
+  {%- endif -%}
+
+  {% if previous_post %}
+  <a class="post-nav-item post-nav-prev" href="{{ previous_post.url | relative_url }}">
+    <div class="nav-arrow">{{ previous_label }}</div>
+    <span class="post-title">{{ previous_post.title }}</span>
+  </a>
+  {% endif %} {% if next_post %}
+  <a class="post-nav-item post-nav-next" href="{{ next_post.url | relative_url }}">
+    <div class="nav-arrow">{{ next_label }}</div>
+    <span class="post-title">{{ next_post.title }}</span>
+  </a>
+  {% endif %}
+</nav>

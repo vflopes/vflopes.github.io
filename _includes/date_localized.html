@@ -1,0 +1,10 @@
+{%- assign current_lang = include.lang | default: site.default_lang | default: site.lang | default: "en" -%}
+{%- assign value = include.date -%}
+{%- if current_lang == "pt" -%}
+{%- assign months_pt = "jan,fev,mar,abr,mai,jun,jul,ago,set,out,nov,dez" | split: "," -%}
+{%- assign month_index = value | date: "%m" | minus: 1 -%}
+{%- assign month_name = months_pt[month_index] -%}
+{{- value | date: "%-d " -}} {{- month_name -}}, {{- value | date: " %Y" -}}
+{%- else -%}
+{{- value | date: "%b %d, %Y" -}}
+{%- endif -%}

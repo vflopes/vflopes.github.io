@@ -28,6 +28,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.1"
+      - name: Check EN/PT mirrored posts
+        env:
+          STRICT_I18N: "true"
+        run: ruby scripts/check_i18n_pairs.rb
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll

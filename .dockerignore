@@ -1,0 +1,5 @@
+.git
+.github
+_site
+.jekyll-cache
+vendor/bundle

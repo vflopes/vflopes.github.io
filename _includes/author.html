@@ -1,0 +1,7 @@
+<div class="author">
+  {%- assign current_lang = page.lang | default: site.default_lang | default: site.lang | default: "en" -%}
+  {%- assign author_bio = site.author.bio_i18n[current_lang] | default: site.author.bio -%}
+  <img class="author-avatar" src="{{ site.author.avatar }}" alt="{{ site.author.username }}" />
+  <h2 class="author-name">{{ site.author.name }}</h2>
+  <p class="author-bio">{{ author_bio }}</p>
+</div>

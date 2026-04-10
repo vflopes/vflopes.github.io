@@ -1,0 +1,33 @@
+en:
+  - title: home
+    url: /en/
+    external: false
+
+  - title: archive
+    url: /en/archive/
+    external: false
+
+  - title: tags
+    url: /en/tags/
+    external: false
+
+  - title: about
+    url: /en/about/
+    external: false
+
+pt:
+  - title: inicio
+    url: /pt/
+    external: false
+
+  - title: arquivo
+    url: /pt/archive/
+    external: false
+
+  - title: tags
+    url: /pt/tags/
+    external: false
+
+  - title: sobre
+    url: /pt/about/
+    external: false

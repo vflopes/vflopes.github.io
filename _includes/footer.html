@@ -1,0 +1,36 @@
+{%- assign current_lang = page.lang | default: site.default_lang | default: site.lang | default: "en" -%}
+{%- assign resume_label = "resume" -%}
+{%- assign rss_label = "rss" -%}
+{%- if current_lang == "pt" -%}
+{%- assign resume_label = "curriculo" -%}
+{%- assign rss_label = "feed" -%}
+{%- endif -%}
+<footer class="footer">
+  <a class="footer_item" href="javascript::void(0)">{{ resume_label }}</a>
+  <a class="footer_item" href="/feed.xml">{{ rss_label }}</a>
+  <span class="footer_item">&copy; {{ site.time | date: "%Y" }}</span>
+</footer>
+<script src="/assets/js/main.js" defer="defer"></script>
+{%- if site.google_analytics -%}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "{{ site.google_analytics }}");
+</script>
+{%- endif -%}
+{%- if page.url contains '/archive/' -%}
+<script src="/assets/js/search.min.js"></script>
+<script>
+  var sjs = SimpleJekyllSearch({
+    searchInput: document.getElementById('search-input'),
+    resultsContainer: document.getElementById('search-results'),
+    json: '/assets/search.json',
+  });
+</script>
+{%- endif -%}

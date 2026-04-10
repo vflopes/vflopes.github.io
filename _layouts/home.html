@@ -1,0 +1,18 @@
+---
+layout: default
+home: true
+---
+
+{%- assign current_lang = page.lang | default: site.default_lang | default: site.lang | default: "en" -%}
+<h3 class="posts-item-note" aria-label="Recent Posts">{% if current_lang == "pt" %}Posts Recentes{% else %}Recent
+  Posts{% endif %}</h3>
+{%- assign visible_posts = site.posts | where: "lang", current_lang -%}
+{%- for post in visible_posts limit: site.number_of_posts -%}
+{%- capture localized_date -%}{% include date_localized.html date=post.date lang=current_lang %}{%- endcapture -%}
+<article class="post-item">
+  <span class="post-item-date">{{ localized_date | strip }}</span>
+  <h4 class="post-item-title">
+    <a href="{{ post.url }}">{{ post.title | escape }}</a>
+  </h4>
+</article>
+{%- endfor -%}
