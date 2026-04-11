@@ -90,6 +90,7 @@
   a {
     color: $text-link-blue;
     text-decoration: none;
+
     &[target="_blank"]::after {
       content: " \2197";
       font-size: $small-font-size;
@@ -108,14 +109,14 @@
     }
   }
 
-  > p {
+  >p {
     margin: 0;
     padding-top: $spacing-full - 15;
     padding-bottom: $spacing-full - 15;
   }
 
   ul.task-list {
-    list-style: none; 
+    list-style: none;
     margin: 0;
 
     li::before {
@@ -246,12 +247,14 @@
     .post-nav-item {
       display: block;
       width: 100%;
+      text-align: center;
     }
 
     .post-nav-item:nth-child(even) {
       border-left: 0;
       padding-left: 0;
       border-top: 1px solid $light;
+      text-align: center;
     }
   }
 }
